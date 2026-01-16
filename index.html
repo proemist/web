@@ -38,7 +38,15 @@
       text-align: center;
       transform: translateY(-2rem); /* slight upward nudge */
     }
-
+    .center-group::before,
+    .center-group::after {
+      content: "";
+      display: block;
+      width: 2rem;
+      height: 1px;
+      background: rgba(255,255,255,0.4);
+      margin: 1rem auto;
+   }
     h1 {
       margin: 0 0 0.5rem;
       font-size: clamp(2rem, 5vw, 3rem);
@@ -190,6 +198,7 @@
   </div>
 </body>
 </html>
+
 
 
 
