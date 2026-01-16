@@ -26,31 +26,67 @@
       color: #ffffff;
     }
 
-    .overlay {
+    .center-group {
       text-align: center;
-      background: rgba(0, 0, 0, 0.35); /* remove if not wanted */
-      padding: 2rem 3rem;
-      border-radius: 12px;
+      transform: translateY(-2rem); /* push content slightly upward */
     }
 
     h1 {
-      margin: 0 0 1rem;
+      margin: 0 0 0.75rem;
       font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 500;
     }
 
-    p {
-      margin: 0;
+    .main-text {
       font-size: 1.2rem;
+      margin-bottom: 2rem;
     }
 
-    a {
+    .below-pair {
+      display: flex;
+      justify-content: center;
+      gap: 5rem; /* distance from centre line */
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    .pair-item {
+      max-width: 220px;
+    }
+
+    .pair-item h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .pair-item p {
+      margin: 0;
+      font-size: 0.85rem;
+      opacity: 0.85;
+    }
+
+    .pair-item a {
       color: #ffffff;
       text-decoration: underline;
     }
-
-    a:hover {
-      opacity: 0.8;
+    .vanity-links {
+      font-size: 0.85rem;
+     opacity: 0.85;
+     display: inline-flex;
+     align-items: center;
+     gap: 0.5rem;
     }
+
+    .vanity-links a {
+     color: #ffffff;
+     text-decoration: underline;
+     white-space: nowrap;
+    }
+
+    .vanity-links .sep {
+     opacity: 0.6;
+    }    
 
     .footer {
       position: fixed;
@@ -74,28 +110,40 @@
 </head>
 
 <body>
-  <div class="overlay">
+  <div class="center-group">
     <h1>ethan anthony walker</h1>
-    <p>
-      music —
-      <a href="https://idlenight.bandcamp.com">idle night</a>
-    </p>
+    <div class="main-text">
+      eaw.nz
+    </div>
+
+    <div class="pair-item">
+  <h3>proemist</h3>
+  <div class="vanity-links">
+    <a href="https://example.com">Link One</a>
+    <span class="sep">•</span>
+    <a href="https://example.com">Link Two</a>
+    <span class="sep">•</span>
+    <a href="https://example.com">Link Three</a>
   </div>
+</div>
+
+      <div class="pair-item">
+  <h3>idle night</h3>
+  <div class="vanity-links">
+    <a href="https://example.com">Link One</a>
+    <span class="sep">•</span>
+    <a href="https://example.com">Link Two</a>
+    <span class="sep">•</span>
+    <a href="https://example.com">Link Three</a>
+  </div>
+</div>
 
   <div class="bottom-right">
-    v0.2b
+    v0.3a
   </div>
-  
+
   <div class="footer">
     contact: mail@eaw.nz
   </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
