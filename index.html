@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ethan</title>
+  <title>Your Site Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -11,6 +11,7 @@
   <link rel="shortcut icon" href="/favicon.ico">
 
   <style>
+    /* --- Base --- */
     html, body {
       height: 100%;
       margin: 0;
@@ -18,17 +19,22 @@
 
     body {
       background: url("background.jpg") center center / cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       font-family: "Times New Roman", Times, serif;
       font-style: italic;
       color: #ffffff;
     }
 
+    /* --- Central layout --- */
+    .page {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     .center-group {
       text-align: center;
-      transform: translateY(-2rem); /* push content slightly upward */
+      transform: translateY(-2rem); /* slight upward nudge */
     }
 
     h1 {
@@ -42,16 +48,15 @@
       margin-bottom: 2rem;
     }
 
+    /* --- Symmetrical pair --- */
     .below-pair {
       display: flex;
       justify-content: center;
-      gap: 5rem; /* distance from centre line */
-      font-size: 0.95rem;
-      opacity: 0.9;
+      gap: 5rem;
     }
 
     .pair-item {
-      max-width: 220px;
+      width: 220px;
     }
 
     .pair-item h3 {
@@ -60,44 +65,26 @@
       font-weight: 500;
     }
 
-    .pair-item p {
-      margin: 0;
+    /* --- Vanity links --- */
+    .vanity-links {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
       font-size: 0.85rem;
       opacity: 0.85;
-    }
-
-    .pair-item a {
-      color: #ffffff;
-      text-decoration: underline;
-    }
-    .vanity-links {
-      font-size: 0.85rem;
-     opacity: 0.85;
-     display: inline-flex;
-     align-items: center;
-     gap: 0.5rem;
+      white-space: nowrap;
     }
 
     .vanity-links a {
-     color: #ffffff;
-     text-decoration: underline;
-     white-space: nowrap;
+      color: #ffffff;
+      text-decoration: underline;
     }
 
     .vanity-links .sep {
-     opacity: 0.6;
-    }    
+      opacity: 0.6;
+    }
 
-    .footer {
-      position: fixed;
-      bottom: 1.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-      font-size: 0.75rem;
-      opacity: 0.85;
-     }
-
+    /* --- Fixed UI text --- */
     .bottom-right {
       position: fixed;
       bottom: 1.5rem;
@@ -106,44 +93,62 @@
       opacity: 0.85;
       text-align: right;
     }
+
+    .footer {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.75rem;
+      opacity: 0.85;
+      text-align: center;
+    }
   </style>
 </head>
 
 <body>
-  <div class="center-group">
-    <h1>ethan anthony walker</h1>
-    <div class="main-text">
-      eaw.nz
-    </div>
-
-    <div class="pair-item">
-  <h3>proemist</h3>
-  <div class="vanity-links">
-    <a href="https://example.com">Link One</a>
-    <span class="sep">•</span>
-    <a href="https://example.com">Link Two</a>
-    <span class="sep">•</span>
-    <a href="https://example.com">Link Three</a>
-  </div>
-</div>
-
-      <div class="pair-item">
-  <h3>idle night</h3>
-  <div class="vanity-links">
-    <a href="https://example.com">Link One</a>
-    <span class="sep">•</span>
-    <a href="https://example.com">Link Two</a>
-    <span class="sep">•</span>
-    <a href="https://example.com">Link Three</a>
-  </div>
-</div>
-
-  <div class="bottom-right">
-    v0.3a
+  <!-- Fixed text -->
+  <div class="top-right">
+    Top right text
   </div>
 
   <div class="footer">
-    contact: mail@eaw.nz
+    Bottom centre text goes here
+  </div>
+
+  <!-- Centre content -->
+  <div class="page">
+    <div class="center-group">
+      <h1>Your Heading</h1>
+
+      <div class="main-text">
+        Your centred text goes here.
+      </div>
+
+      <div class="below-pair">
+        <div class="pair-item">
+          <h3>Left Title</h3>
+          <div class="vanity-links">
+            <a href="https://example.com">Link One</a>
+            <span class="sep">•</span>
+            <a href="https://example.com">Link Two</a>
+            <span class="sep">•</span>
+            <a href="https://example.com">Link Three</a>
+          </div>
+        </div>
+
+        <div class="pair-item">
+          <h3>Right Title</h3>
+          <div class="vanity-links">
+            <a href="https://example.com">Link One</a>
+            <span class="sep">•</span>
+            <a href="https://example.com">Link Two</a>
+            <span class="sep">•</span>
+            <a href="https://example.com">Link Three</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
